@@ -23,7 +23,8 @@
 
     header h1 {
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: 400;
+      font-family: "VT323", monospace;
       margin-bottom: 1rem;
       animation: fadeIn 1.5s ease-in-out;
     }
