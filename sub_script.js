@@ -1,39 +1,40 @@
-const adaptiveFN = document.getElementById('adaptiveFN');
-const adaptiveLN = document.getElementById('adaptiveLN');
-const adaptiveCN = document.getElementById('adaptiveCN');
-const adaptiveCP = document.getElementById('adaptiveCP');
-const adaptiveCO = document.getElementById('adaptiveCO');
-const adaptiveSU = document.getElementById('adaptiveSU');
-const adaptiveE = document.getElementById('adaptiveE');
-const adaptive = {adaptiveFN: "First Name", adaptiveLN: "Last Name", adaptiveE: "E-Mail", adaptiveCN: "Company Name (Optional)", adaptiveCP: "Company Position (Optional)", adaptiveCO: "Country", adaptiveSU: "Subject (Optional)"};
-const con_adaptive = list(adaptive);
-let index = 0;
-let typed = false;
+document.addEventListener("DOMContentLoaded", () => {
+  const ids = [
+    "mainTitle", "adaptiveFN", "adaptiveLN", "adaptiveE",
+    "adaptiveCN", "adaptiveCP", "adaptiveCO", "adaptiveSU"
+  ];
 
-function typeEffect() {
-    if (index < con_adaptive.length) {
-        let subject = con_adaptive[index];
-        let text = adaptive[subject];
-        index++;
-        subject.style.fontFamily = "Pacifico";
-        let i = 0;
-        subject.textContent = '';
-        const interval = setInterval(() => {
-        subject.textContent += text[i];
-        i++;
-        if (i >= text.length) {
-            clearInterval(interval);
-            typing = false;
-        }
-        }, 90);
-    }
-}
-/*
-if (!typed) {
-    for(let i = 0; i < con_adaptive.length; i++) {
-        con_adaptive[i].textContent = '';
-    }
-    typed = true;
-}
-*/    
-// typeEffect()
+  const delayBetween = 200; // ms between titles
+  const typingSpeed = 60;   // ms per letter
+
+  // Store original text first, before clearing
+  const elements = ids.map(id => {
+    const el = document.getElementById(id);
+    if (!el) return null;
+    const originalText = el.textContent.trim();
+    el.textContent = ""; // clear text
+    return { el, text: originalText };
+  }).filter(Boolean); // remove nulls
+
+  // Typing effect for one element
+  function typeText(el, text, callback) {
+    let i = 0;
+    const interval = setInterval(() => {
+      el.textContent += text[i];
+      i++;
+      if (i >= text.length) {
+        clearInterval(interval);
+        setTimeout(callback, delayBetween);
+      }
+    }, typingSpeed);
+  }
+
+  // Recursive sequence typing
+  function startTypingSequence(index = 0) {
+    if (index >= elements.length) return;
+    const { el, text } = elements[index];
+    typeText(el, text, () => startTypingSequence(index + 1));
+  }
+
+  startTypingSequence();
+});
