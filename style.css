@@ -384,13 +384,12 @@ header {
   justify-content: center;
   min-height: 100vh;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #fafafa 0%, #f3f3f3 100%);
+  background: rgb(26, 26, 26);
 }
 
 .submit-grid form {
-  background: white;
+  background: black;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   padding: 3rem;
   max-width: 600px;
   width: 100%;
@@ -412,7 +411,7 @@ header {
   font-weight: 600;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #191919;
+  color: #e6e6e6;
 }
 
 .submit-grid input,
@@ -421,11 +420,12 @@ header {
   width: 100%;
   padding: 0.8rem 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #393939;
   border-radius: 8px;
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 400;
+  font-family: "VT323", monospace;
+  transition: border 0.3s ease;
 }
 
 .submit-grid input:focus,
