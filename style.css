@@ -426,6 +426,7 @@ header {
   font-weight: 400;
   font-family: "VT323", monospace;
   transition: border 0.3s ease;
+  background: darkgray;
 }
 
 .submit-grid input:focus,
