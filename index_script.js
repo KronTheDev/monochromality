@@ -132,3 +132,35 @@ document.getElementById("prev").addEventListener("click", () => {
   });
 })();
 
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("bg-audio");
+  let targetVolume = 0;
+  let currentVolume = 0;
+  const fadeSpeed = 0.02; // Adjust fade speed (lower = slower)
+
+  // Start audio muted and paused until visible
+  audio.volume = 0;
+  audio.play().catch(() => {}); // autoplay attempt (muted context)
+
+  // Use Intersection Observer to detect header visibility
+  const header = document.getElementById("video-header");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      targetVolume = entry.isIntersecting ? 1 : 0; // fade in/out
+    });
+  }, { threshold: 0.3 }); // triggers when ~30% of header visible
+
+  observer.observe(header);
+
+  // Smooth fade effect loop
+  function fadeAudio() {
+    if (Math.abs(currentVolume - targetVolume) > 0.01) {
+      currentVolume += (targetVolume - currentVolume) * fadeSpeed;
+      audio.volume = currentVolume;
+    } else {
+      audio.volume = targetVolume;
+    }
+    requestAnimationFrame(fadeAudio);
+  }
+  fadeAudio();
+});
