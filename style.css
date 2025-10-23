@@ -496,17 +496,4 @@
 .ty-grid div h1 {
     font-family: "Jersey 10", sans-serif;
 }
-    
-/* Trail toggle widget - fixed left-bottom collapsed on desktop, tappable on mobile */
-.trail-widget {
-  position: fixed;
-  left: 12px;
-  bottom: 12px;
-  z-index: 1200;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: Inter, system-ui, sans-serif;
-  outline: none;
-}
 
