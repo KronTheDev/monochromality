@@ -133,7 +133,7 @@ document.getElementById("prev").addEventListener("click", () => {
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-  const audio = document.getElementById("bg-audio");
+  const audio = document.getElementById("bg-video");
   let targetVolume = 0;
   let currentVolume = 0;
   const fadeSpeed = 0.02; // Adjust fade speed (lower = slower)
