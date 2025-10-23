@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("bg-video");
   let targetVolume = 0;
   let currentVolume = 0;
-  const fadeSpeed = 0.02; // Adjust fade speed (lower = slower)
+  const fadeSpeed = 0.08; // Adjust fade speed (lower = slower)
 
   // Start audio muted and paused until visible
   audio.volume = 0;
