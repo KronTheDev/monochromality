@@ -316,6 +316,7 @@ header {
 
 .member {
   flex-shrink: 0;
+  flex: 1;
   width: 100%;
   opacity: 0;
   transition: all 0.6s ease;
