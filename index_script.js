@@ -136,23 +136,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("bg-video");
   let targetVolume = 0;
   let currentVolume = 0;
-  const fadeSpeed = 0.08; // Adjust fade speed (lower = slower)
+  const fadeSpeed = 0.08;
 
-  // Start audio muted and paused until visible
   audio.volume = 0;
-  audio.play().catch(() => {}); // autoplay attempt (muted context)
+  audio.play().catch(() => {});
 
-  // Use Intersection Observer to detect header visibility
   const header = document.getElementById("video-header");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      targetVolume = entry.isIntersecting ? 1 : 0; // fade in/out
+      targetVolume = entry.isIntersecting ? 1 : 0;
     });
-  }, { threshold: 0.3 }); // triggers when ~30% of header visible
+  }, { threshold: 0.3 });
 
   observer.observe(header);
 
-  // Smooth fade effect loop
   function fadeAudio() {
     if (Math.abs(currentVolume - targetVolume) > 0.01) {
       currentVolume += (targetVolume - currentVolume) * fadeSpeed;
