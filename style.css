@@ -40,12 +40,10 @@ header {
   left: 5%;
   color: white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
-  align-content: center;
-  align-items: center;
 }
 
 .header-content h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
   font-family: "VT323", monospace;
   animation: fadeIn 1.5s ease-in-out;
@@ -72,7 +70,7 @@ header {
 
     section {
       padding: 5rem 10%;
-      max-width: 1200px;
+      max-width: 100vw;
       margin: auto;
     }
     .two-col {
