@@ -40,6 +40,8 @@ header {
   left: 5%;
   color: white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+  align-content: center;
+  align-items: center;
 }
 
 .header-content h1 {
