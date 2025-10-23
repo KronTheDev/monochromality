@@ -57,6 +57,7 @@ header {
 .header-content button {
   font-size: 1rem;
   opacity: 0.8;
+  display: inline-block;
   padding:1rem 2rem;
   border:none;
   background:#333;
