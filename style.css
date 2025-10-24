@@ -380,7 +380,7 @@ body {
   padding:1rem;
   font-size:1.25rem;
   border:none;
-  border-radius:8px;
+  font-family: "Jersey 10", sans-serif;
 }
 .content {
   overflow:hidden;
