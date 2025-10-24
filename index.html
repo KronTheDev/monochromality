@@ -1,133 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Monochromality</title>
   <link rel="icon" href="mc_icon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Playfair+Display:wght@700&family=Orbitron:wght@700&family=Pacifico&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="topbar">
+
+  <!-- TOP BAR -->
+  <nav class="topbar" role="navigation" aria-label="Main navigation">
     <div class="nav-content">
-      <div>
-        <img src="tp_mc_logo.png" alt="EveryMotion Logo" class="logo">
-        <span class="brand">ONOCHROMALITY</span>
+      <div class="brand-wrap">
+        <img src="tp_mc_logo.png" alt="Monochromality logo" class="logo" />
+        <span class="brand">MONOCHROMALITY</span>
       </div>
-      <div>
-        <a href="#about">About</a>
-        <a href="#personnel">Team</a>
-        <a href="#developer">Contact</a>
-        <a href="#faq">FAQ</a>
+
+      <div class="nav-links">
+        <a href="#video-header" data-scroll>Home</a>
+        <a href="#about" data-scroll>About</a>
+        <a href="#personnel" data-scroll>Team</a>
+        <a href="#developer" data-scroll>Contact</a>
+        <a href="#faq" data-scroll>FAQ</a>
       </div>
     </div>
   </nav>
 
-  <header id="video-header">
-    <video id="bg-video" autoplay loop playsinline>
-      <source src="sp_1-vid.mp4" type="video/mp4">
-      <img src="sp_1.png" alt="Sneak Peak 1" style="width: 100vw; height: 100vh;">
+  <!-- HEADER / HERO -->
+  <header id="video-header" class="hero">
+    <!-- Video: loops. We control its volume in JS. -->
+    <video id="bg-video" autoplay muted loop playsinline preload="auto">
+      <source src="sp_1-vid.mp4" type="video/mp4" />
+      <!-- fallback image -->
+      <img src="sp_1.png" alt="Sneak Peak 1 (fallback)">
     </video>
+
+    <!-- Unmute overlay (hidden unless browser prevents autoplay with sound) -->
+    <button id="unmute-btn" class="unmute-btn" aria-hidden="true" title="Enable audio">🔊 Enable sound</button>
+
     <div class="header-content">
-      <img src="banner_mc.png" alt="Mono-Banner" style="width: 45%">
-      <h1>“You’re the only one left to dream this place real.”</h1>
-      <div class="buffer"></div>
-      <h2>Join Us</h2>
-      <a href="https://discord.gg/MjgVCMUQKR">
-        <button class="button_a" style="color: rgb(68, 68, 133);"><img src="discorrupted.png" alt="Discord Logo" style="height: 5%; width: 5%;top: 2rem;"><strong>Discord</strong></button>
-      </a>
-      <a href="https://discord.gg/MjgVCMUQKR">
-        <button class="button_a" style="color: rgb(133, 68, 97);"><img src="discorrupted.png" alt="Discord Logo" style="height: 5%; width: 5%;top: 2rem;"><strong>Instagram</strong></button>
-      </a>
-      <a href="https://discord.gg/MjgVCMUQKR">
-        <button class="button_a" style="color: rgb(68, 132, 133);"><img src="discorrupted.png" alt="Discord Logo" style="height: 5%; width: 5%;top: 2rem;"><strong>TikTok</strong></button>
-      </a>
+      <img src="banner_mc.png" alt="Mono Banner" class="hero-banner" />
+      <h1 class="hero-quote">“You’re the only one left to dream this place real.”</h1>
+
+      <div class="header-buttons" role="toolbar" aria-label="Join links">
+        <a href="https://discord.gg/MjgVCMUQKR" class="hero-link" target="_blank" rel="noopener">
+          <button class="button_a"><img src="discorrupted.png" alt="" class="btn-icon" /><span>Discord</span></button>
+        </a>
+        <a href="#" class="hero-link" target="_blank" rel="noopener">
+          <button class="button_a"><img src="discorrupted.png" alt="" class="btn-icon" /><span>Instagram</span></button>
+        </a>
+        <a href="#" class="hero-link" target="_blank" rel="noopener">
+          <button class="button_a"><img src="discorrupted.png" alt="" class="btn-icon" /><span>TikTok</span></button>
+        </a>
+      </div>
     </div>
   </header>
- 
-  <section id="about" class="two-col">
-    <div>
-      <h2>About EveryMotion</h2>
-      <p>EveryMotion removes the barriers between you and your virtual world. No sensors. No controllers. Just movement — as it’s meant to be. Our technology learns, adapts, and evolves with every gesture you make, bringing a level of freedom that redefines immersion.</p>
+
+  <!-- ABOUT (3 alternating blocks) -->
+  <section id="about" class="about-section">
+    <div class="about-block alt-1">
+      <div class="about-text">
+        <h2>The Liminal</h2>
+        <p>Countless levels stretch beyond the edge of maps—corridors, rooms, blinked spaces that should not exist. On release there are 15 mapped levels; each is meant to disorient, to hold you just long enough to make you doubt whether you ever left.</p>
+      </div>
+      <div class="about-image vcr-template">
+        <img src="sp_1.png" alt="Liminal preview">
+      </div>
     </div>
-    <div class="image-container">
-      <img src="https://live.staticflickr.com/8098/8547142228_b76961be9b_z.jpg" alt="Person in Motion" style="box-shadow: -1rem -2rem #7070703b;width:100%; border-radius:12px;">
-      <span class="caption" id="caption">‘motion’ By Alan Kinsella ⤴</span>
+
+    <div class="about-block alt-2">
+      <div class="about-image vcr-template">
+        <img src="sp_1.png" alt="Entities preview">
+      </div>
+      <div class="about-text">
+        <h2>The Unknown</h2>
+        <p>They watch. The Howler, the Hounds and the Duller—each with their own predatory patience—study your patterns and wait for the single, fatal mistake. They are not always loud; sometimes the quiet is the loudest warning.</p>
+      </div>
+    </div>
+
+    <div class="about-block alt-3">
+      <div class="about-text">
+        <h2>The Unforseen</h2>
+        <p>You were not supposed to find this. Abandoned by a government body that once swore to map the Halls, our protagonist follows breadcrumbs of a past operation and discovers something older, something that never belonged in any report. The Player uncovers it piece by piece.</p>
+      </div>
+      <div class="about-image vcr-template">
+        <img src="sp_1.png" alt="Story preview">
+      </div>
     </div>
   </section>
 
+  <!-- PERSONNEL / CAROUSEL -->
   <section id="personnel" class="personnel-section">
     <h2>Our Team</h2>
-    <div class="carousel">
-      <div class="member active">
-        <img src="https://cdn.discordapp.com/avatars/728659440722509957/6481ac5276eee8ca2c95739cd7fb6815.png?size=1024" alt="Person 1">
+
+    <div class="carousel-grid" aria-live="polite">
+      <!-- member cards (template images kept so you can replace later) -->
+      <div class="card">
+        <img src="https://cdn.discordapp.com/avatars/728659440722509957/6481ac5276eee8ca2c95739cd7fb6815.png?size=1024" alt="Andrew Pie avatar" />
         <h3>Andrew Pie (KronTheDev)</h3>
         <p class="position">CEO & Lead Developer</p>
         <p class="motto">“Let's bring back Natural motion.”</p>
-        <p class="contacts">✉ kronthedev@gmail.com</p>
       </div>
-      <div class="member">
-        <img src="https://cdn.discordapp.com/avatars/1126841634806583338/70753bb80d73f2285b49ec2ac3a1abde.png?size=1024" alt="Person 2">
-        <h3>(Satalit)</h3>
+
+      <div class="card">
+        <img src="https://cdn.discordapp.com/avatars/1126841634806583338/70753bb80d73f2285b49ec2ac3a1abde.png?size=1024" alt="Satalit avatar" />
+        <h3>Satalit</h3>
         <p class="position">Chief Vision Architect</p>
         <p class="motto">“Design the impossible, then build it.”</p>
       </div>
-      <div class="member">
-        <img src="https://cdn.discordapp.com/avatars/1126841634806583338/70753bb80d73f2285b49ec2ac3a1abde.png?size=1024" alt="Person 2">
-        <h3>(Satalit)</h3>
-        <p class="position">Chief Vision Architect</p>
-        <p class="motto">“Design the impossible, then build it.”</p>
+
+      <div class="card">
+        <img src="https://cdn.discordapp.com/avatars/1126841634806583338/70753bb80d73f2285b49ec2ac3a1abde.png?size=1024" alt="Person avatar" />
+        <h3>Person 3</h3>
+        <p class="position">Systems</p>
+        <p class="motto">“Ships are built of lines and promises.”</p>
       </div>
-      <div class="member">
-        <img src="https://cdn.discordapp.com/avatars/1126841634806583338/70753bb80d73f2285b49ec2ac3a1abde.png?size=1024" alt="Person 2">
-        <h3>(Satalit)</h3>
-        <p class="position">Chief Vision Architect</p>
-        <p class="motto">“Design the impossible, then build it.”</p>
+
+      <div class="card">
+        <img src="https://cdn.discordapp.com/avatars/1126841634806583338/70753bb80d73f2285b49ec2ac3a1abde.png?size=1024" alt="Person avatar" />
+        <h3>Person 4</h3>
+        <p class="position">Support</p>
+        <p class="motto">“We keep the lights on.”</p>
       </div>
     </div>
-    <div class="controls">
-      <button id="prev">‹</button>
-      <button id="next">›</button>
+
+    <div class="carousel-controls">
+      <button id="carousel-prev" aria-label="Previous">‹</button>
+      <button id="carousel-next" aria-label="Next">›</button>
     </div>
   </section>
 
-<div class="buffer"></div>
+  <div class="buffer"></div>
 
-<div class="dev">
-  <section id="developer">
+  <section id="developer" class="dev">
     <h2>Get in Touch</h2>
-    <p>Do you wish to inquire us about a professional matter? Or just have a burning idea?<br>Please, reach out! We read it all.</p>
+    <p>Do you wish to inquire about a professional matter? Or just have a burning idea? Please reach out — we read it all.</p>
     <div style="margin-top:2rem;">
-      <a href="https://kronthedev.github.io/monochromality/submit">
-        <button class="button_a" style="padding:1rem 2rem; border:none; background:#333; color:#fff; border-radius:8px; cursor:pointer; margin-right:1rem;">Contact Us</button>
+      <a href="https://kronthedev.github.io/monochromality/submit" target="_blank" rel="noopener">
+        <button class="button_a contact-button">Contact Us</button>
       </a>
     </div>
   </section>
-</div>
 
-<div class="faq" id="faq">
-  <h2>FAQ</h2>
+  <section id="faq" class="faq">
+    <h2>FAQ</h2>
 
-  <div class="faq-item">
-    <button class="collapsible">When will the Game release?</button>
-    <div class="content">
-      <p style="text-align: center;">The Game is planned for release around Q4 2025.</p>
+    <div class="faq-item">
+      <button class="collapsible">When will the game release?</button>
+      <div class="content">
+        <p style="text-align:center;">The game is planned for release around Q4 2025.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-</div>
+  <footer>
+    <p>© 2025 Null Concept. All rights reserved.</p>
+    <p>Connect with us: nullconceptdevs@gmail.com</p>
+  </footer>
 
-<footer>
-  <p>© 2025 Null Concept. All rights reserved.</p>
-  <p>Connect with us: nullconceptdevs@gmail.com</p>
-</footer>
-
-
-<script src="index_script.js"></script>
-
+  <script src="index_script.js" defer></script>
 </body>
 </html>
