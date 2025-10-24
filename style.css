@@ -391,6 +391,22 @@ body {
   border-radius:0 0 8px 8px;
 }
 
+.section-light {
+  background-color: #222;
+}
+
+.section-light h2 {
+  font-family: 'Jersey 10', sans-serif;
+}
+
+.trailer iframe {
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+  border: none;
+  border-radius: 10px;
+}
+
 .buffer { height:48px; }
 .dev { padding:2.5rem 6%; max-width:1200px; margin:2rem auto; }
 footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; }
