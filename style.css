@@ -10,7 +10,6 @@ body {
   overflow-x:hidden;
 }
 
-/* ---------- Topbar ---------- */
 .topbar {
   position:fixed;
   top:0; left:0; right:0;
@@ -32,14 +31,13 @@ body {
   justify-content:space-between;
 }
 
-/* brand + logo inline, vertically centered */
 .brand-wrap {
   display:flex;
   align-items:center;
   gap:12px;
 }
 .logo {
-  height:44px;     /* slightly larger but vertically centered */
+  height:44px;
   width:auto;
   display:block;
   object-fit:contain;
@@ -52,7 +50,6 @@ body {
   font-size:1.15rem;
 }
 
-/* nav links */
 .nav-links {
   display:flex;
   align-items:center;
@@ -70,10 +67,8 @@ body {
   transform:translateY(-2px);
 }
 
-/* space for fixed topbar */
 .site-offset { height:70px; }
 
-/* ---------- HERO / HEADER ---------- */
 .hero {
   position:relative;
   height:100vh;
@@ -95,7 +90,6 @@ body {
   transition:filter .4s ease;
 }
 
-/* Unmute button overlay */
 .unmute-btn {
   position: absolute;
   top: 18px;
@@ -111,7 +105,6 @@ body {
   display: none;
 }
 
-/* header content container (left aligned so we can place text+buttons) */
 .header-content {
   position:relative;
   z-index:10;
@@ -125,7 +118,6 @@ body {
   color:#fff;
 }
 
-/* banner */
 .hero-banner {
   width:45%;
   max-width:520px;
@@ -134,7 +126,6 @@ body {
   margin-bottom:6px;
 }
 
-/* quote */
 .hero-quote {
   font-family: 'VT323', monospace;
   font-size:1.9rem;
@@ -144,7 +135,6 @@ body {
   text-shadow: 0 4px 22px rgba(0,0,0,0.6);
 }
 
-/* header buttons in a row */
 .header-buttons {
   display:flex;
   gap:12px;
@@ -173,10 +163,8 @@ body {
   display:inline-block;
 }
 
-/* hover */
 .button_a:hover { transform:translateY(-3px); }
 
-/* ---------- ABOUT (alternating blocks) ---------- */
 .about-section {
   padding:4rem 6%;
   max-width:1200px;
@@ -186,7 +174,6 @@ body {
   gap:2.5rem;
 }
 
-/* each block has two columns that switch order */
 .about-block {
   display:flex;
   gap:2rem;
@@ -198,7 +185,6 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.45);
 }
 
-/* text & image sizing */
 .about-text { flex:1; min-width:260px; padding:1rem; }
 .about-text h2 { font-size:1.6rem; margin-bottom:10px; color:#fff; }
 .about-text p { color:#cfcfcf; line-height:1.6; }
@@ -213,12 +199,10 @@ body {
   transform-origin:center;
 }
 
-/* alternate order classes */
 .alt-1 { flex-direction:row; }
 .alt-2 { flex-direction:row-reverse; }
 .alt-3 { flex-direction:row; }
 
-/* VCR flicker helper (applied/removed by JS for occasional glitch) */
 .vcr-flicker {
   animation: vcrFlicker .8s steps(6, end) 1;
   filter: contrast(1.1) saturate(.9);
@@ -233,7 +217,6 @@ body {
   100%{ opacity:1; transform:translateY(0); }
 }
 
-/* ---------- CONFIRMED STUFF ---------- */
 .confirmed-section {
   padding:3rem 6%;
   max-width:1200px;
@@ -257,7 +240,6 @@ body {
 }
 .confirmed-item h3 { margin-bottom:8px; font-size:1.05rem; }
 
-/* ---------- PERSONNEL CAROUSEL ---------- */
 .personnel-section {
   padding:4rem 6%;
   max-width:1200px;
@@ -279,7 +261,6 @@ body {
   position:relative;
 }
 
-/* individual card */
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
   border-radius:12px;
@@ -302,7 +283,6 @@ body {
   border:3px solid rgba(255,255,255,0.04);
 }
 
-/* carousel controls */
 .carousel-controls {
   margin-top:1rem;
   display:flex;
@@ -321,10 +301,8 @@ body {
 }
 .carousel-controls button:hover { transform:translateY(-3px); }
 
-/* fade state applied during transition */
 .carousel-fade-out { opacity:0.18; pointer-events:none; transform:translateY(6px); }
 
-/* ---------- COLLAPSIBLE FAQ ---------- */
 .faq { padding:2rem 6%; max-width:1200px; margin:2rem auto; background:#efefef; color:#141414; border-radius:10px; }
 .collapsible {
   width:100%;
@@ -346,12 +324,10 @@ body {
   border-radius:0 0 8px 8px;
 }
 
-/* ---------- Misc ---------- */
 .buffer { height:48px; }
 .dev { padding:2.5rem 6%; max-width:1200px; margin:2rem auto; }
 footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; }
 
-/* responsiveness */
 @media (max-width:900px) {
   .hero-banner { width:70%; }
   .header-content { align-items:center; text-align:center; }
@@ -359,7 +335,6 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   .about-block { flex-direction:column; }
   .carousel-grid { grid-template-columns:1fr; }
 
-  /* MOBILE TOPBAR: hide text brand, keep logo and links */
   .brand { display:none; }
   .nav-links { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
   .unmute-btn { top:80px; right:18px; } /* avoid overlap with hidden nav */
