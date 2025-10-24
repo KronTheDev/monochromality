@@ -53,6 +53,7 @@ header {
 .header-content h2 {
   font-family: "Jersey 10", sans-serif;
   text-align: center;
+  font-size: 2rem;
 }
 
 .header-content button {
@@ -277,10 +278,11 @@ header {
 .logo {
   height: 40px;
   width: auto;
+  top: 5px;
 }
 
 .brand {
-  font-family: 'Orbitron', sans-serif; /* same futuristic font */
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: #e8e8e8;

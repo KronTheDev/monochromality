@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const ids = [
-    "mainTitle", "adaptiveFN", "adaptiveLN", "adaptiveE",
-    "adaptiveCN", "adaptiveCP", "adaptiveCO", "adaptiveSU"
+    "mainTitle", "adapriveUN", "adaptiveFN", "adaptiveLN", "adaptiveE", "adaptiveCO", "adaptiveSU"
   ];
 
   const delayBetween = 200; // ms between titles
