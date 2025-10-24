@@ -24,6 +24,7 @@
       <div class="nav-links">
         <a href="#video-header" data-scroll>Home</a>
         <a href="#about" data-scroll>About</a>
+        <a href="#confirmed" data-scroll>Confirmed</a>
         <a href="#personnel" data-scroll>Team</a>
         <a href="#developer" data-scroll>Contact</a>
         <a href="#faq" data-scroll>FAQ</a>
@@ -33,14 +34,11 @@
 
   <!-- HEADER / HERO -->
   <header id="video-header" class="hero">
-    <!-- Video: loops. We control its volume in JS. -->
     <video id="bg-video" autoplay muted loop playsinline preload="auto">
       <source src="sp_1-vid.mp4" type="video/mp4" />
-      <!-- fallback image -->
       <img src="sp_1.png" alt="Sneak Peak 1 (fallback)">
     </video>
 
-    <!-- Unmute overlay (hidden unless browser prevents autoplay with sound) -->
     <button id="unmute-btn" class="unmute-btn" aria-hidden="true" title="Enable audio">🔊 Enable sound</button>
 
     <div class="header-content">
@@ -94,12 +92,42 @@
     </div>
   </section>
 
+  <!-- CONFIRMED STUFF -->
+  <section id="confirmed" class="confirmed-section">
+    <h2>Confirmed Stuff</h2>
+    <div class="confirmed-grid">
+      <div class="confirmed-item">
+        <h3>Mapped Levels</h3>
+        <p>15 levels will be included at initial release — each with unique hazards, architecture, and audio ambiance.</p>
+      </div>
+      <div class="confirmed-item">
+        <h3>Known Entities</h3>
+        <p>Confirmed inhabitants: the Howler, the Hounds, and the Duller. Each has distinct behavior and detection mechanics.</p>
+      </div>
+      <div class="confirmed-item">
+        <h3>Story Outline</h3>
+        <p>Players follow a discovery thread after being abandoned by the MEG-like organization. Gradual reveal: a deeper presence at the heart of the Halls.</p>
+      </div>
+      <div class="confirmed-item">
+        <h3>Audio & Video</h3>
+        <p>The header uses a looping video with its own audio track. Audio fades in/out based on viewport visibility and requires an interaction if browser policy blocks autoplay.</p>
+      </div>
+      <div class="confirmed-item">
+        <h3>Release Window</h3>
+        <p>Planned approximate window: Q4 2025 (subject to change).</p>
+      </div>
+      <div class="confirmed-item">
+        <h3>Team</h3>
+        <p>Core team and roles are listed in the Team section; contributors will be added over time.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- PERSONNEL / CAROUSEL -->
   <section id="personnel" class="personnel-section">
     <h2>Our Team</h2>
 
     <div class="carousel-grid" aria-live="polite">
-      <!-- member cards (template images kept so you can replace later) -->
       <div class="card">
         <img src="https://cdn.discordapp.com/avatars/728659440722509957/6481ac5276eee8ca2c95739cd7fb6815.png?size=1024" alt="Andrew Pie avatar" />
         <h3>Andrew Pie (KronTheDev)</h3>
