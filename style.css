@@ -397,6 +397,9 @@ body {
 
 .section-light h2 {
   font-family: 'Jersey 10', sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .trailer iframe {
@@ -417,6 +420,7 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   .header-buttons { justify-content:center; flex-wrap:wrap; }
   .about-block { flex-direction:column; }
   .carousel-grid { grid-template-columns:1fr; }
+  .scarousel-grid { grid-template-columns:1fr; }
 
   .brand { display:none; }
   .nav-links { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
