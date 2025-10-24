@@ -303,6 +303,73 @@ body {
 
 .carousel-fade-out { opacity:0.18; pointer-events:none; transform:translateY(6px); }
 
+
+
+.sthanks-section {
+  padding:4rem 6%;
+  max-width:1200px;
+  margin:2rem auto;
+  background:#2b2b2b;
+  border-radius:12px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.45);
+  color:#ddd;
+  text-align:center;
+}
+
+.scarousel-grid {
+  margin-top:1.5rem;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:1.25rem;
+  align-items:stretch;
+  transition:opacity .5s ease;
+  position:relative;
+}
+
+.scard {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  border-radius:12px;
+  padding:1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  opacity:1;
+  min-height:240px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  transition: opacity .6s ease, transform .6s ease;
+}
+.scard img {
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid rgba(255,255,255,0.04);
+}
+
+.scarousel-controls {
+  margin-top:1rem;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+.scarousel-controls button {
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.06);
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:1.15rem;
+  transition:transform .15s ease;
+}
+.scarousel-controls button:hover { transform:translateY(-3px); }
+
+.scarousel-fade-out { opacity:0.18; pointer-events:none; transform:translateY(6px); }
+
+
+
 .faq { padding:2rem 6%; max-width:1200px; margin:2rem auto; background:#efefef; color:#141414; border-radius:10px; }
 .collapsible {
   width:100%;

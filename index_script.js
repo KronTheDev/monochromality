@@ -168,6 +168,63 @@ document.addEventListener('DOMContentLoaded', () => {
   grid.addEventListener('mouseleave', () => { autoplay = setInterval(() => nextBtn.click(), 8000); });
 });
 
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = qs('.scarousel-grid');
+  const cards = qsa('.scarousel-grid .scard');
+  const prevBtn = qs('#scarousel-prev');
+  const nextBtn = qs('#scarousel-next');
+
+  if (!grid || cards.length === 0) return;
+
+  const pairs = [];
+  for (let i = 0; i < cards.length; i += 2) {
+    pairs.push([cards[i], cards[i+1] || null]);
+  }
+
+  let index = 0;
+  let isTransitioning = false;
+
+  function showPair(i) {
+    i = (i + pairs.length) % pairs.length;
+    grid.classList.add('scarousel-fade-out');
+    isTransitioning = true;
+    setTimeout(() => {
+      cards.forEach(c => { c.style.display = 'none'; c.style.opacity = '0'; });
+      const pair = pairs[i];
+      if (pair[0]) { pair[0].style.display = ''; pair[0].style.opacity = '1'; }
+      if (pair[1]) { pair[1].style.display = ''; pair[1].style.opacity = '1'; }
+      grid.classList.remove('scarousel-fade-out');
+      isTransitioning = false;
+    }, 320);
+  }
+
+  cards.forEach(c => { c.style.display = 'none'; c.style.opacity = '0'; });
+  showPair(index);
+
+  nextBtn.addEventListener('click', () => {
+    if (isTransitioning) return;
+    index = (index + 1) % pairs.length;
+    showPair(index);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (isTransitioning) return;
+    index = (index - 1 + pairs.length) % pairs.length;
+    showPair(index);
+  });
+
+  let autoplay = setInterval(() => { nextBtn.click(); }, 8000);
+  grid.addEventListener('mouseenter', () => clearInterval(autoplay));
+  grid.addEventListener('mouseleave', () => { autoplay = setInterval(() => nextBtn.click(), 8000); });
+});
+
 /* ---------- Collapsible FAQ logic ---------- */
 (function () {
   const collapsibles = Array.from(document.querySelectorAll('.collapsible'));
