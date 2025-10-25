@@ -2,7 +2,7 @@
 function qs(sel, ctx=document) { return ctx.querySelector(sel); }
 function qsa(sel, ctx=document) { return Array.from(ctx.querySelectorAll(sel)); }
 
-let init = false;
+/* let init = false;
 
 function initialize() {
   setTimeout(250);
@@ -16,7 +16,7 @@ function initialize() {
 if (!init) {
   initialize();
   init = true;
-}
+} */
 
 /* ---------- Smooth scrolling for nav links ---------- */
 document.addEventListener('click', (ev) => {
