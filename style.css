@@ -398,7 +398,7 @@ body {
 .section-light h2 {
   font-family: 'Jersey 10', sans-serif;
   text-align: center;
-  margin: 2rem;
+  margin-bottom: 2rem;
 }
 
 .trailer iframe {
