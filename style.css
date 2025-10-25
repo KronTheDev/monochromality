@@ -398,8 +398,7 @@ body {
 .section-light h2 {
   font-family: 'Jersey 10', sans-serif;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .trailer iframe {
@@ -408,6 +407,7 @@ body {
   height: 405px;
   border: none;
   border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 .buffer { height:48px; }
