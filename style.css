@@ -382,17 +382,18 @@ body {
   border:none;
   font-family: "Jersey 10", sans-serif;
 }
+
 .content {
   overflow:hidden;
   max-height:0;
   transition: max-height .38s ease, padding .28s ease;
   background:#19191a;
   color:#cfcfcf;
-  border-radius:0 0 8px 8px;
 }
 
 .section-light {
   background-color: #222;
+  align-content: center;
 }
 
 .section-light h2 {
@@ -480,6 +481,7 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   font-family: "Inter", sans-serif;
   transition: border 0.3s ease, box-shadow 0.3s ease;
   background: rgb(20, 20, 20);
+  color: white;
 }
 
 .submit-grid input:focus,
