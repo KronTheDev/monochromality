@@ -551,13 +551,28 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   text-align: center;
 }
 
+.section-dark h3,
+.section-light h3 {
+  font-size: 1.35rem;
+  text-align: left;
+}
+
 .section-dark div[class="confirmed-item"],
 .section-light div[class="confirmed-item"] {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.section-dark[id="templates"] img,
+section[id="cdesc"] p {
+  font-size: .9rem;
+  font-style: italic; 
+}
+
+.section-dark div[class="confirmed-item"] {
+  background-color: #222 
+}
+
+section[id="templates"] img,
 .section-dark div[class="confirmed-item"] img,
 .section-light div[class="confirmed-item"] img {
   display: block;
@@ -572,7 +587,7 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   background: #1f1f1f;
   color: #fff;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.03);
+  border: 5px solid rgba(255,255,255,0.03);
   padding: 8px 12px;
   cursor: pointer;
   font-weight: 600;
