@@ -394,9 +394,8 @@ body {
 
 .section-light {
   background-color: #222;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  display: grid;
+  place-items: center;
 }
 
 .section-light h2 {
@@ -546,10 +545,9 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
 }
 
 .section-dark {
-  display: flex;
+  display: grid;
   background-color: #111;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
 }
 
 .section-dark h1 {
@@ -559,13 +557,6 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   margin:4rem 0 2rem 0;
   color:#f2f2f2;
   text-align: center;
-}
-
-.cpage-grid {
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:1rem;
-  margin-top:1rem;
 }
 
 .dot {
