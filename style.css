@@ -550,11 +550,16 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   color:#f2f2f2;
   text-align: center;
 }
-
 .section-dark h3,
 .section-light h3 {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.section-dark h4,
+.section-light h4 {
   font-size: 1.35rem;
-  text-align: left;
+  color: white;
 }
 
 .section-dark div[class="confirmed-item"],
@@ -564,8 +569,12 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
 }
 
 section[id="cdesc"] p {
-  font-size: .9rem;
+  font-size: 1.4rem;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
   font-style: italic; 
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .section-dark div[class="confirmed-item"] {
