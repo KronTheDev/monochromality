@@ -406,8 +406,8 @@ body {
 
 .trailer iframe {
   width: 100%;
-  max-width: 720px;
-  height: 405px;
+  max-width: 70%;
+  height: 39.5%;
   border: none;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -552,7 +552,7 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
 }
 .section-dark h4,
 .section-light h4 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: white;
   font-family: 'Jersey 10', sans-serif;
   font-style: italic;
