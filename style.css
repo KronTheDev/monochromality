@@ -550,14 +550,16 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   color:#f2f2f2;
   text-align: center;
 }
-.section-dark h3,
-.section-light h3 {
-  font-size: 1.8rem;
-  color: white;
-}
-
 .section-dark h4,
 .section-light h4 {
+  font-size: 1.8rem;
+  color: white;
+  font-family: 'Jersey 10', sans-serif;
+  font-style: italic;
+}
+
+.section-dark h5,
+.section-light h5 {
   font-size: 1.35rem;
   color: white;
 }

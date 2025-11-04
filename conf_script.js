@@ -1,6 +1,6 @@
-const templates = ["Template 1", 
-  "Template 2", 
-  "Template 3"];
+const templates = ["Test", 
+  "Template 1", 
+  "Template 2"];
 
 
 function copyClip (id) {
