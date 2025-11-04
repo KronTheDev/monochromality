@@ -571,7 +571,7 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
 }
 
 section[id="cdesc"] p {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-family: "Merriweather", serif;
   font-optical-sizing: auto;
   font-style: italic; 
