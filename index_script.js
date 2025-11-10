@@ -2,22 +2,6 @@
 function qs(sel, ctx=document) { return ctx.querySelector(sel); }
 function qsa(sel, ctx=document) { return Array.from(ctx.querySelectorAll(sel)); }
 
-/* let init = false;
-
-function initialize() {
-  setTimeout(250);
-  reload();
-  setTimeout(500);
-  window.location.href = "#confirmed";
-  setTimeout(200);
-  window.location.href = "#video-header";
-}
-
-if (!init) {
-  initialize();
-  init = true;
-} */
-
 /* ---------- Smooth scrolling for nav links ---------- */
 document.addEventListener('click', (ev) => {
   const a = ev.target.closest('[data-scroll], .nav-links a');
@@ -187,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+/* scarousel Version */
 
 
 
