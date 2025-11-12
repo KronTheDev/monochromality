@@ -137,17 +137,18 @@ body {
 
 .wishlist {
   font-family: 'Jersey 10', sans-serif;
-  font-size: 1.1rem;
+  font-size: 2.5rem;
   font-weight:400;
   font-style: italic;
-  margin: 0 0 6px 1.2rem;
+  margin-left: 3.2rem;
+  margin-top: 6px;
   color:#f2f2f2;
   text-shadow: 0 4px 22px rgba(250,250,250,0.35);
 }
 
 .w-arrow {
   font-family: 'Jersey 10', sans-serif;
-  font-size: .8rem;
+  font-size: 1.8rem;
   font-weight:400;
   color:#9d9d9d;
 }
