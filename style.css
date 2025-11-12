@@ -447,6 +447,8 @@ footer { padding:2rem 6%; text-align:center; color:#bfbfbf; background:#0b0b0b; 
   .unmute-btn { top:80px; right:18px; } /* avoid overlap with hidden nav */
   .confirmed-grid { grid-template-columns: repeat(1, 1fr); }
   .confirmed-item { min-height:auto; }
+  .w-arrow { display:none; }
+  .wishlist { display: none; }
 }
 
     /* submit.page here */
