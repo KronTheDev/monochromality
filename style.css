@@ -408,6 +408,8 @@ body {
   transition: max-height .38s ease, padding .28s ease;
   background:#19191a;
   color:#cfcfcf;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 .section-light {
@@ -423,9 +425,11 @@ body {
 }
 
 .trailer iframe {
-  width: 100%;
-  max-width: 70%;
-  height: 39.5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 39%;
   border: none;
   border-radius: 10px;
   margin-bottom: 2rem;
