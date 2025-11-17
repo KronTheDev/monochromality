@@ -409,6 +409,9 @@ body {
   transition: max-height .38s ease, padding .28s ease;
   background:#19191a;
   color:#cfcfcf;
+}
+
+.content p {
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
